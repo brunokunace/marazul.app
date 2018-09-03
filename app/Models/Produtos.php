@@ -10,7 +10,7 @@ class Produtos extends Model
 
     public function bandeira()
     {
-        return $this->hasOne(Bandeiras::class);
+        return $this->hasOne(Bandeiras::class, 'cod_pro', 'cod');
     }
 
 }

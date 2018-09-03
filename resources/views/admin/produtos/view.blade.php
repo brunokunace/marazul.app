@@ -65,19 +65,23 @@
                                     <tr role="row">
                                         <th>Código</th>
                                         <th>ID Drive</th>
-                                        <th>Departure</th>
+                                        <th>Ano</th>
+                                        <th>Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <tr>
-                                                <td>{{ $produto->cod }}</td>
-                                                <td>{{ $produto->nome }}</td>
-                                                <td><div class="btn-group">
-                                                        <button type="button" class="btn btn-default"><a href="produto/edit/{{ $produto->id }}"><i class="far fa-edit"></i></button>
-                                                        <button type="button" class="btn btn-default"><a href="produto/save/{{ $produto->id }}"><i class="fas fa-download"></i></a></button>
-                                                        <button type="button" class="btn btn-default"><a href="produto/{{ $produto->id }}"><i class="fas fa-external-link-alt"></i></a></button>
-                                                      </div></td>
-                                            </tr>
+                                    <tr>
+                                        <td>{{ $produto->bandeira->cod_pro }}</td>
+                                        <td>{{ $produto->bandeira->drive_id }}</td>
+                                        <td>{{ $produto->bandeira->ano }}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><a href="{{ route('admin.bandeira.create', $produto->bandeira->id) }}"><i class="far fa-edit"></i></a></button>
+                                                <button type="button" class="btn btn-default"><a href="{{ route('admin.bandeira.create') }}"><i class="fas fa-download"></i></a></button>
+                                                <button type="button" class="btn btn-default"><a href="{{ route('admin.bandeira.create', $produto->bandeira->id) }}"><i class="fas fa-external-link-alt"></i></a></button>
+                                              </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

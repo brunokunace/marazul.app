@@ -30,10 +30,8 @@ class CreateProdutosTable extends Migration
             $table->string('ncm')->nullable();
             $table->string('lista');
             $table->timestamps();
-            
         });
     }
-
     /**
      * Reverse the migrations.
      *
