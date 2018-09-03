@@ -25,7 +25,7 @@ class ProdutosController extends Controller
     // [PAGINA] EXIBE AS INFORMAÇÕES DE UM PRODUTO
     public function view($id)
     {
-        $produto = Produtos::find($id);
+        $produto = Produtos::where('cod', $id)->first();
         return view('admin.produtos.view', compact('produto'));
     }
      
