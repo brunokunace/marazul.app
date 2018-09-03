@@ -70,6 +70,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @isset($produto->bandeira)
                                     <tr>
                                         <td>{{ $produto->bandeira->cod_pro }}</td>
                                         <td>{{ $produto->bandeira->drive_id }}</td>
@@ -82,6 +83,7 @@
                                               </div>
                                         </td>
                                     </tr>
+                                @endisset
                                 </tbody>
                             </table>
                         </div>
